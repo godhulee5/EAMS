@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://img.freepik.com/free-vector/hiring-agency-candidates-job-interview_1262-18940.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            grid-gap: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employee Feedback Form</h1>
+    </header>
+    <main>
+        <form id="feedbackForm" action="feed.jsp" method="post">
+            <h2>Feedback Details</h2>
+
+            <label for="employeeName">Employee Name:</label>
+            <input type="text" id="employeeName" name="fname" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="fdepartment" required>
+                <option value="HR">Human Resources</option>
+                <option value="IT">Information Technology</option>
+                <option value="Finance">Finance</option>
+                <option value="Frontend Developer">Frontend Developer</option>
+                <option value="Backend Developer">Backend Developer</option>
+            </select>
+
+            <label for="feedbackType">Feedback Type:</label>
+            <select id="feedbackType" name="feedbackType" required>
+                <option value="Positive">Positive</option>
+                <option value="Constructive">Constructive</option>
+                <option value="Concern">Concern</option>
+            </select>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p>Click <a href="viewfeedback.jsp"> View Feedback</a></p>
+    </main>
+</body>
+</html>
